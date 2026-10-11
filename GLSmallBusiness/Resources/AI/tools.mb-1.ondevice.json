@@ -1,0 +1,64 @@
+{
+  "toolset": "mb-1",
+  "mode": "on_device",
+  "tools": [
+    {
+      "name": "find",
+      "area": "core",
+      "confirm": "never",
+      "summary": "Search records by kind and words; returns short matches with ids.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "description": "Kind of record to search.",
+            "enum": ["customer", "estimate", "invoice", "change_order", "job", "receipt", "price_item", "employee", "subcontractor", "project", "payment", "time_entry", "paycheck", "sub_payment", "attachment", "document"]
+          },
+          "query": {"type": "string", "description": "Words to match: name, number, title or vendor."},
+          "status": {
+            "type": "string",
+            "description": "Optional status filter.",
+            "enum": ["draft", "sent", "accepted", "declined", "expired", "unpaid", "partiallyPaid", "paid", "overdue", "pending", "approved", "scheduled", "inProgress", "completed", "owed"]
+          },
+          "limit": {"type": "integer", "description": "Most results, 1-5.", "minimum": 1, "maximum": 5}
+        },
+        "required": ["kind"]
+      }
+    },
+    {
+      "name": "get",
+      "area": "core",
+      "confirm": "never",
+      "summary": "Read one record's details, totals and balance by id.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "description": "Kind of record.",
+            "enum": ["customer", "estimate", "invoice", "change_order", "job", "receipt", "price_item", "employee", "subcontractor", "project", "payment", "time_entry", "paycheck", "sub_payment", "attachment", "document", "business", "work_schedule", "app_settings"]
+          },
+          "id": {"type": "string", "description": "Record id from find."}
+        },
+        "required": ["kind"]
+      }
+    },
+    {
+      "name": "report",
+      "area": "core",
+      "confirm": "never",
+      "summary": "Money, who owes me, what I owe, schedule, openings, expiring documents.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "kind": {"type": "string", "description": "Which report.", "enum": ["money_summary", "owed_to_me", "i_owe", "schedule", "openings", "expiring_documents", "estimate_pipeline", "job_profit", "backup_status"]},
+          "date_from": {"type": "string", "description": "Period start, YYYY-MM-DD."},
+          "date_to": {"type": "string", "description": "Period end, YYYY-MM-DD."},
+          "id": {"type": "string", "description": "Job id for job_profit."}
+        },
+        "required": ["kind"]
+      }
+    }
+  ]
+}

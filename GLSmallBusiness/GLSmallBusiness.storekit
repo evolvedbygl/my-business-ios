@@ -1,0 +1,106 @@
+{
+  "identifier" : "GLPRO0001",
+  "nonRenewingSubscriptions" : [],
+  "products" : [],
+  "settings" : {
+    "_applicationInternalID" : "6778954606",
+    "_developerTeamID" : "T77JR9H9SB",
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : []
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "22148954",
+      "localizations" : [],
+      "name" : "Pro Access",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [],
+          "codeOffers" : [],
+          "displayPrice" : "12.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "10000001",
+          "localizations" : [
+            {
+              "description" : "Full access, billed monthly",
+              "displayName" : "Monthly",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "mybusiness.pro.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Pro Monthly",
+          "subscriptionGroupID" : "22148954",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [],
+          "codeOffers" : [],
+          "displayPrice" : "89.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "10000002",
+          "localizations" : [
+            {
+              "description" : "Full access, billed yearly",
+              "displayName" : "Annual",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "mybusiness.pro.yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Pro Yearly",
+          "subscriptionGroupID" : "22148954",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [],
+          "codeOffers" : [],
+          "displayPrice" : "19.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "10000003",
+          "localizations" : [
+            {
+              "description" : "Everything in Pro plus the assistant, billed monthly",
+              "displayName" : "Pro + AI Monthly",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "mybusiness.ai.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Pro + AI Monthly",
+          "subscriptionGroupID" : "22148954",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [],
+          "codeOffers" : [],
+          "displayPrice" : "199.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "10000004",
+          "localizations" : [
+            {
+              "description" : "Everything in Pro plus the assistant, billed yearly",
+              "displayName" : "Pro + AI Annual",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "mybusiness.ai.yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Pro + AI Yearly",
+          "subscriptionGroupID" : "22148954",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}
